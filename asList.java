@@ -12,7 +12,7 @@ public class asList {
 
         /*
         Stream<Integer> ss = nums.stream();
-        // every value of nums gets copied to s1
+        // every value of nums gets copied to ss
 
         Stream<Integer> s1 = ss.filter(n -> n%2 == 0);
         // creates a Stream which contains only even values of ss
