@@ -1,0 +1,38 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="alien1" class="com.fr3nzy.Alien" scope="prototype">-->
+<!--        scope = "prototype" means whenever you call .getBean it will create a new object-->
+<!--    </bean>-->
+
+    <bean id="alien1" class="com.fr3nzy.Alien" autowire="byType">
+<!--        <property name="age" value="21"></property>-->
+<!--            this tag wil assign the value of age through the setter method-->
+
+<!--        <constructor-arg type="com.fr3nzy.Laptop" ref="lap"/>-->
+<!--        <constructor-arg type ="int" value="21"/>-->
+
+<!--        <constructor-arg index="1" ref="laptop"/>-->
+<!--        <constructor-arg index="0" value="21"/>-->
+
+<!--        the below method works in sequence, if you want it to work otherwise we need to add @ConstructorProperties in the Alien file-->
+<!--        <constructor-arg name="lap" ref="laptop"/>-->
+<!--        <constructor-arg name="age" value="21"/>-->
+
+        <property name="com" ref="com1"/>
+        <property name="age" value="21"/>
+
+    </bean>
+
+    <bean id="com1" class="com.fr3nzy.Laptop" primary="true">
+<!--        if there are multiple bean of the same type, it will select the one with primary-->
+    </bean>
+
+    <bean id="com2" class="com.fr3nzy.Desktop" lazy-init="true">
+<!--        The lazy-init attribute is used so that the Desktop bean is not created when the container is initialized; it will only be created when it is first accessed-->
+    </bean>
+
+</beans>
