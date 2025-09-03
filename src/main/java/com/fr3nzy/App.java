@@ -22,7 +22,7 @@ public class App
         System.out.println(obj2.age);f
         obj2.code();
 */
-//        Desktop obj1 = context.getBean("com2", Desktop.class);
+        Desktop obj1 = context.getBean("com", Desktop.class);
 
     }
 }
