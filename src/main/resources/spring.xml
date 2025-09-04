@@ -22,12 +22,12 @@
 <!--        <constructor-arg name="lap" ref="laptop"/>-->
 <!--        <constructor-arg name="age" value="21"/>-->
 
-        <property name="com" ref="com1"/>
+        <property name="com" ref="com2"/>
         <property name="age" value="21"/>
 
     </bean>
 
-    <bean id="com1" class="com.fr3nzy.Laptop" primary="true">
+    <bean id="com" class="com.fr3nzy.Laptop" primary="true">
 <!--        if there are multiple bean of the same type, it will select the one with primary-->
     </bean>
 
